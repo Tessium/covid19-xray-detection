@@ -3,7 +3,7 @@ Project was designed for anomaly detection from X-Ray of lungs, in order to dete
 
 ## References:
 
-[https://www.researchgate.net/publication/329630552_CXNet-m1_Anomaly_Detection_on_Chest_X-Rays_with_Image-Based_Deep_Learning [1](https://www.researchgate.net/publication/329630552_CXNet-m1_Anomaly_Detection_on_Chest_X-Rays_with_Image-Based_Deep_Learning%20%5b1)], [2]
+[https://www.researchgate.net/publication/329630552_CXNet-m1_Anomaly_Detection_on_Chest_X-Rays_with_Image-Based_Deep_Learning](https://www.researchgate.net/publication/329630552_CXNet-m1_Anomaly_Detection_on_Chest_X-Rays_with_Image-Based_Deep_Learning) 
 
 [https://en.wikipedia.org/wiki/Anomaly_detection](https://en.wikipedia.org/wiki/Anomaly_detection)
 
