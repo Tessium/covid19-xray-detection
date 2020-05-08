@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[167]:
+# In[1]:
 
 
 import matplotlib.pyplot as plt
@@ -33,7 +33,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 
-# In[152]:
+# In[2]:
 
 
 # define which categories to predict
@@ -44,7 +44,7 @@ labels = []
 data = []
 
 
-# In[153]:
+# In[3]:
 
 
 # for each category, browse folders
@@ -93,7 +93,7 @@ plt.show()
 
 
 
-# In[155]:
+# In[4]:
 
 
 # rescale pixels to range [0, 255]
@@ -118,7 +118,7 @@ train_x, test_x, train_y, test_y = train_test_split(data, labels, test_size=.2, 
 augmented = ImageDataGenerator(rotation_range=20, fill_mode='nearest')
 
 
-# In[156]:
+# In[5]:
 
 
 def get_model(imp=False):
@@ -162,7 +162,7 @@ def get_model(imp=False):
     return model
 
 
-# In[157]:
+# In[6]:
 
 
 # get model
@@ -217,11 +217,29 @@ model.save('model.h5', save_format='h5')
 
 
 
-# In[105]:
+# In[7]:
 
 
 # predict from validation dataset
 predicted = model.predict(test_x, batch_size=64)
+
+
+# In[ ]:
+
+
+
+
+
+# In[8]:
+
+
+# convert one hot encoded vector into categorical labels
+predicted = np.argmax(predicted, axis=1)
+
+# generate report based on predictions
+report = classification_report(test_y.argmax(axis=1), predicted, target_names=le.classes_)
+
+print(report)
 
 
 # In[ ]:
